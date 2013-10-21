@@ -5,8 +5,10 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(params[:user])
+    user = User.authenticate(params[:username], params[:password])
     if @user.save
-      redirect_to root_url, :notice => "Welcome to Watch.it!"
+      session[:user_id] = @user.id
+      redirect_to "/main", :notice => "Welcome to Watch.it!"
     else
       render "new"
     end

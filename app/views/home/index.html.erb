@@ -1,0 +1,8 @@
+<h1>Home#index</h1>
+<% @users.each do |user| %>
+  <p>
+    <%= user[:first_name]%>
+    <%= user[:last_name]%>
+    <%= user[:username]%>
+  </p>
+  <% end %>
