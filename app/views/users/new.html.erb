@@ -1,6 +1,5 @@
+<%= form_for @user, html: {class: "form-signin"} do |f| %>
 <h1>Sign Up</h1>
-
-<%= form_for @user do |f| %>
   <% if @user.errors.any? %>
     <div class="error_messages">
       <h2>Form is invalid</h2>
@@ -13,27 +12,27 @@
   <% end %>
   <p>
     <%= f.label :first_name %><br />
-    <%= f.text_field :first_name %>
+    <%= f.text_field :first_name, :class => 'form-control' %>
   </p>
   <p>
     <%= f.label :last_name %><br />
-    <%= f.text_field :last_name %>
+    <%= f.text_field :last_name, :class => 'form-control' %>
   </p>
   <p>
     <%= f.label :username %><br />
-    <%= f.text_field :username %>
+    <%= f.text_field :username, :class => 'form-control' %>
   </p>
   <p>
     <%= f.label :email %><br />
-    <%= f.text_field :email %>
+    <%= f.text_field :email, :class => 'form-control' %>
   </p>
   <p>
     <%= f.label :password %><br />
-    <%= f.password_field :password %>
+    <%= f.password_field :password, :class => 'form-control' %>
   </p>
   <p>
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %>
+    <%= f.password_field :password_confirmation, :class => 'form-control' %>
   </p>
-  <p class="button"><%= f.submit "Sign Up"%></p>
+    <%= button_tag "Sign Up", :class => 'btn btn-block btn-lg btn-primary' %>
 <% end %>
