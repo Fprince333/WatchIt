@@ -1,5 +1,5 @@
  <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" href="/main">Watch.it</a>
@@ -7,8 +7,7 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <% if current_user %>
-            <li><%= link_to "view my list", user_path(current_user) %>
-    Logged in as <%= current_user.username %></li>
+            <li><%= link_to "Watch List", user_path(current_user), :class => "btn btn-block btn-lg btn-inverse" %></li>
             <li><%= link_to "Log out", log_out_path %></li>
             <% else %>
             <li><%= link_to "Sign up", sign_up_path %></li>
