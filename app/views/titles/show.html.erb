@@ -1,0 +1,14 @@
+<section>
+<h2><%= @title.title %></h2>
+<img src="<%= @title.poster %>" alt="poster">
+
+<div class="reviews">
+<h5>Reviews</h5>
+<ul class="reviews-list">
+<%= render :partial => 'review', :collection => @title.reviews %>
+</ul>
+</div>
+<%= form_for [@title, @review] do |f| %>
+  <%= f.text_area :body, size: "60x12" %>
+  <%= f.submit "Submit Review" %>
+<% end %>

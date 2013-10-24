@@ -14,4 +14,5 @@ class Review < ActiveRecord::Base
   attr_accessible :body, :title_id, :user_id
   belongs_to :user
   belongs_to :title
+  validates :title_id, :body, :presence => true
 end

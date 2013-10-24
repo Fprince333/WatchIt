@@ -2,7 +2,7 @@ require 'omdbapi'
 
 class TitlesController < ApplicationController
   def index
-    @users = User.all
+
   end
 
   def search
@@ -19,7 +19,13 @@ class TitlesController < ApplicationController
       end
     end
   end
-#TODO change show to search
+
+  def show
+    @title = Title.find(params[:id])
+    @review = @title.reviews.new
+
+  end
+
   def create
     @title = Title.new(params[:title])
   end

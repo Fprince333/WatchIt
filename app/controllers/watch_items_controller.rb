@@ -36,7 +36,7 @@ class WatchItemsController < ApplicationController
       watch_item = current_user.watch_items.create
       watch_item.title_id = watched_title.id
       watch_item.save
-      flash[:notice] = "Successfully added #{new_title.title}"
+      flash[:notice] = "Added to your list!"
       redirect_to :back
     else
       flash[:notice] = "Already there."
