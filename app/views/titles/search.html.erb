@@ -9,36 +9,32 @@
    <% end %>
   </div>
 </div>
-<% if @movies%>
-  <% @movies.each do |t| %>
-  <% title = OMDB.id(t[:imdb_id]) %>
-    <% if title.poster != "N/A" %>
-    <img src="<%= title.poster %>" alt="poster">
-    <ul>
-      <li><%= t[:title] %></li>
-      <li><%= t[:year] %></li>
-      <li><%= t[:type] %></li>
-    </ul>
-    <%= form_tag('/watch_items') do %>
-    <%= hidden_field_tag 'title', t[:title] %>
-    <%= hidden_field_tag 'imdb_id', t[:imdb_id] %>
-    <%= submit_tag 'Add to Watchlist' %>
+<div class="row">
+  <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+    <% if @movies%>
+    <div class="thumbnail" style="text-align: center; background: #ecf0f1; padding-top: 35px;">
+    <% @movies.each do |t| %>
+    <% title = OMDB.id(t[:imdb_id]) %>
+      <% if title.poster != "N/A" %>
+      <img src="<%= title.poster %>" alt="poster">
+      <% else %>
+      <img src="http://i.movie.as/none_140px_2_bk.jpg" alt="no poster">
       <% end %>
-    <% else %>
-    <img src="http://i.movie.as/none_140px_2_bk.jpg" alt="no poster">
-    <ul>
-      <li><%= t[:title] %></li>
-      <li><%= t[:year] %></li>
-      <li><%= t[:type] %></li>
-    </ul>
-    <%= form_tag('/watch_items') do %>
-    <%= hidden_field_tag 'title', t[:title] %>
-    <%= hidden_field_tag 'imdb_id', t[:imdb_id] %>
-    <%= submit_tag 'Add to Watchlist' %>
+      <div style="padding-bottom:30px" class="caption">
+        <h3><%= t[:title] %></h3>
+        <p><%= t[:year] %> | <%= t[:type] %></p>
+              <%= form_tag('/watch_items') do %>
+              <%= hidden_field_tag 'title', t[:title] %>
+              <%= hidden_field_tag 'imdb_id', t[:imdb_id] %>
+              <%= submit_tag 'Add to Watchlist', :class => 'btn btn-primary' %>
+              <% end %>
+      </div>
       <% end %>
+    </div>
     <% end %>
-  <% end %>
-<% end %>
+  </div>
+</div>
+
 
 
 
