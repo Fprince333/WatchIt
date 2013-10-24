@@ -11,7 +11,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131020182944) do
+ActiveRecord::Schema.define(:version => 20131021222044) do
+
+  create_table "reviews", :force => true do |t|
+    t.text     "body"
+    t.integer  "title_id"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "titles", :force => true do |t|
+    t.string   "title"
+    t.string   "kind"
+    t.text     "poster"
+    t.text     "plot"
+    t.string   "imdbID"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "first_name"
@@ -22,6 +40,14 @@ ActiveRecord::Schema.define(:version => 20131020182944) do
     t.string   "password_salt"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+  end
+
+  create_table "watch_items", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "title_id"
+    t.boolean  "watched",    :default => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
   end
 
 end
