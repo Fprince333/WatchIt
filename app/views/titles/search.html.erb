@@ -1,10 +1,14 @@
-<h1>Search Titles</h1>
-  <%= form_tag("/titles/search", method: :get) do %>
-  <%= text_field_tag "q", nil, placeholder: "What would you like to watch?" %>
-  <%= submit_tag "Search" %>
-<!--   need to disable the search function with an empty text field
- -->
- <% end %>
+<div class="row">
+  <div class="form-group shape" style="position:fixed; right:75px">
+    <%= form_tag("/titles/search", class: 'form-signin', method: :get) do %>
+    <h1>Search Titles</h1>
+    <%= text_field_tag "q", nil, placeholder: "Enter title", :class => 'form-group' %>
+    <%= submit_tag "Search", :class => 'btn btn-lg btn-primary' %>
+  <!--   need to disable the search function with an empty text field
+   -->
+   <% end %>
+  </div>
+</div>
 <% if @movies%>
   <% @movies.each do |t| %>
   <% title = OMDB.id(t[:imdb_id]) %>
@@ -36,8 +40,6 @@
   <% end %>
 <% end %>
 
-<!--   need to make each of these movies have the ability to be added to the user's watch_item as a title that belongs to the user that is unwatched
- -->
 
 
 

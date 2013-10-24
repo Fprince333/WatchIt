@@ -22,7 +22,7 @@ body {
 .form-signin {
   max-width: 330px;
   padding: 15px;
-  margin: 0 auto;
+  margin: 15px 15px 15px 15px;
   border-radius: 6px;
   background-color: #ecf0f1;
 }
@@ -35,4 +35,72 @@ body {
 #footer {
   height: 60px;
   background-color: #f5f5f5;
+}
+
+.shape {
+  background-color: rgb(22, 160, 133);
+   box-shadow: rgb(26, 34, 44) 1px 1px,
+    rgb(26, 34, 44) 2px 2px,
+    rgb(26, 34, 44) 3px 3px,
+    rgb(26, 34, 44) 4px 4px,
+    rgb(26, 34, 44) 5px 5px,
+    rgb(26, 34, 44) 6px 6px,
+    rgb(26, 34, 44) 7px 7px,
+    rgb(26, 34, 44) 8px 8px,
+    rgb(26, 34, 44) 9px 9px,
+    rgb(26, 34, 44) 10px 10px,
+    rgb(26, 34, 44) 11px 11px,
+    rgb(26, 34, 44) 12px 12px,
+    rgb(26, 34, 44) 13px 13px,
+    rgb(26, 34, 44) 14px 14px,
+    rgb(26, 34, 44) 15px 15px,
+    rgb(26, 34, 44) 16px 16px,
+    rgb(26, 34, 44) 17px 17px,
+    rgb(26, 34, 44) 18px 18px,
+    rgb(26, 34, 44) 19px 19px,
+    rgb(26, 34, 44) 20px 20px,
+    rgb(26, 34, 44) 21px 21px,
+    rgb(26, 34, 44) 22px 22px,
+    rgb(26, 34, 44) 23px 23px,
+    rgb(26, 34, 44) 24px 24px,
+    rgb(26, 34, 44) 25px 25px,
+    rgb(26, 34, 44) 26px 26px,
+    rgb(26, 34, 45) 27px 27px,
+    rgb(26, 35, 45) 28px 28px,
+    rgb(27, 35, 45) 29px 29px,
+    rgb(27, 35, 46) 30px 30px,
+    rgb(27, 36, 46) 31px 31px,
+    rgb(27, 36, 47) 32px 32px,
+    rgb(28, 36, 47) 33px 33px,
+    rgb(28, 37, 47) 34px 34px,
+    rgb(28, 37, 48) 35px 35px,
+    rgb(28, 37, 48) 36px 36px,
+    rgb(28, 37, 49) 37px 37px,
+    rgb(29, 38, 49) 38px 38px,
+    rgb(29, 38, 49) 39px 39px,
+    rgb(29, 38, 50) 40px 40px,
+    rgb(29, 39, 50) 41px 41px,
+    rgb(30, 39, 51) 42px 42px,
+    rgb(30, 39, 51) 43px 43px,
+    rgb(30, 40, 51) 44px 44px,
+    rgb(30, 40, 52) 45px 45px,
+    rgb(30, 40, 52) 46px 46px,
+    rgb(31, 41, 52) 47px 47px,
+    rgb(31, 41, 53) 48px 48px,
+    rgb(31, 41, 53) 49px 49px,
+    rgb(31, 41, 54) 50px 50px,
+    rgb(32, 42, 54) 51px 51px,
+    rgb(32, 42, 54) 52px 52px,
+    rgb(32, 42, 55) 53px 53px,
+    rgb(32, 43, 55) 54px 54px,
+    rgb(32, 43, 56) 55px 55px,
+    rgb(33, 43, 56) 56px 56px,
+    rgb(33, 44, 56) 57px 57px,
+    rgb(33, 44, 57) 58px 58px,
+    rgb(33, 44, 57) 59px 59px,
+    rgb(34, 45, 58) 60px 60px;
+  max-height: 400px;
+  max-width: 400px;
+  font-size: 75px;
+  text-align: center;
 }
