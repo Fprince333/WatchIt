@@ -26,7 +26,12 @@ body {
   border-radius: 6px;
   background-color: #ecf0f1;
 }
-
+.huge {
+  padding-bottom: 160px;
+}
+.small {
+  padding-bottom: 20px;
+}
 #footer {
   height: 60px;
   background-color: #f5f5f5;
