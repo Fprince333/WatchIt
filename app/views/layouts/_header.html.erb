@@ -7,7 +7,6 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <% if current_user %>
-            <li><%= link_to "Watch List", user_path(current_user), :class => "btn btn-primary btn-block btn-lg btn-inverse" %></li>
             <li><%= link_to "Log out", log_out_path %></li>
             <% else %>
             <li><%= link_to "Sign up", sign_up_path %></li>

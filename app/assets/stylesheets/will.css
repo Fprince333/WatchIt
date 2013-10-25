@@ -1,5 +1,6 @@
 body {
-  min-height: 1500px;
+  font-family: 'Lato';
+  min-height: 500px;
   padding-top: 70px;
   background: url('bg.jpg') no-repeat center center fixed !important;
 }
@@ -47,7 +48,11 @@ body {
 .small {
   padding-bottom: 20px;
 }
-
+.fixtop {
+  position:fixed;
+  top:75px;
+  right: -60px;
+}
 .shape {
   background-color: rgb(22, 160, 133);
    box-shadow: rgb(26, 34, 44) 1px 1px,
@@ -275,4 +280,27 @@ body {
   font-size: 75px;
   line-height: 150px;
   text-align: center;
+}
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 60px;
+
+  /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+  margin-top: -90px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+.carousel-caption h1 {
+  font-family: 'Lato';
+  font-size: 48px;
+  color: #333333
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 375px;
 }
