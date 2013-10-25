@@ -16,7 +16,7 @@
     <% @movies.each do |t| %>
     <% title = OMDB.id(t[:imdb_id]) %>
       <% if title.poster != "N/A" %>
-      <img src="<%= title.poster %>" alt="poster">
+      <img src="http://src.sencha.io/<%= title.poster %>" alt="poster">
       <% else %>
       <img src="http://i.movie.as/none_140px_2_bk.jpg" alt="no poster">
       <% end %>
