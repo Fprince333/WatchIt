@@ -1,58 +1,75 @@
-<h1><%= @user.first_name %>'s Watch List</h1>
+<div class="row">
+  <div class="container" style="text-align:center">
+    <h1><%= @user.first_name %>'s Watch List</h1>
+  </div>
+</div>
+
+<div class="container marketing">
   <h2>To Watch</h2>
-    <h3>Movies</h3>
-    <hr>
-    <% @user.watch_items.each do |watch_item| %>
+  <div class="row">
+    <div class="col-lg-4">
+      <h3>Movies</h3>
+      <% @user.watch_items.each do |watch_item| %>
       <% title_id =  watch_item.title_id  %>
       <% title = Title.find title_id %>
-      <% if title.kind == "movie" %>
-      <ul>
-        <% if title.poster != "N/A" %>
-        <li><img src="<%= title.poster %>" alt="poster"></li>
-        <% else %>
-          <li><img src="http://i.movie.as/none_140px_2_bk.jpg" alt="no poster"></li>
+        <% if title.kind == "movie" %>
+        <div class="medium">
+        <h4><%= title.title %></h4>
+          <% if title.poster != "N/A" %>
+          <img class="img_shape" style="height:300px; width:250px" src="<%= title.poster %>" alt="poster">
+          <% else %>
+          <img class="img_shape" style="height:300px; width:250px" src="http://i.movie.as/none_140px_2_bk.jpg" alt="no poster">
+          <% end %>
+          <div class="caption" style="padding-left:40px">
+          <%= link_to "Delete", watch_item, :method => :delete, :class => 'btn btn-danger', :confirm => "Are you sure?" %>
+          <a class="btn btn-primary" href="/titles/<%= title_id %>">Review</a>
+          </div>
+        </div>
         <% end %>
-        <li><%= title.title %></li>
-      </ul>
       <% end %>
-      <%= link_to "Delete", watch_item, :method => :delete, :confirm => "Are you sure?" %>
-      <a href="/titles/<%= title_id %>">Review</a>
-    <% end %>
-    <h3>TV Shows</h3>
-    <hr>
-    <% @user.watch_items.each do |watch_item| %>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+      <h3>TV Shows</h3>
+      <% @user.watch_items.each do |watch_item| %>
       <% title_id =  watch_item.title_id  %>
       <% title = Title.find title_id %>
-      <% if title.kind == "series" %>
-      <ul>
-        <% if title.poster != "N/A" %>
-        <li><img src="<%= title.poster %>" alt="poster"></li>
-        <% else %>
-        <li><img src="http://i.movie.as/none_140px_2_bk.jpg" alt="no poster"></li>
+        <% if title.kind == "series" %>
+      <div class="medium">
+        <h4><%= title.title %></h4>
+          <% if title.poster != "N/A" %>
+          <img class="img_shape" style="height:300px; width:250px" src="<%= title.poster %>" alt="poster">
+          <% else %>
+          <img class="img_shape" style="height:300px; width:250px"  src="http://i.movie.as/none_140px_2_bk.jpg" alt="no poster">
+          <% end %>
+          <div class="caption" style="padding-left:40px">
+          <%= link_to "Delete", watch_item, :method => :delete, :class => 'btn btn-danger', :confirm => "Are you sure?" %>
+          <a class="btn btn-primary" href="/titles/<%= title_id %>">Review</a>
+          </div>
+        </div>
         <% end %>
-        <li><%= title.title %></li>
-      </ul>
       <% end %>
-      <%= link_to "Delete", watch_item, :method => :delete, :confirm => "Are you sure?" %>
-      <a href="/titles/<%= title_id %>">Review</a>
-    <% end %>
-    <h3>TV Episodes</h3>
-    <hr>
-    <% @user.watch_items.each do |watch_item| %>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+      <h3>TV Episodes</h3>
+      <% @user.watch_items.each do |watch_item| %>
       <% title_id =  watch_item.title_id  %>
       <% title = Title.find title_id %>
-      <% if title.kind == "episode" %>
-      <ul>
-        <% if title.poster != "N/A" %>
-        <li><img src="<%= title.poster %>" alt="poster"></li>
-        <% else %>
-        <li><img src="http://i.movie.as/none_140px_2_bk.jpg" alt="no poster"></li>
+        <% if title.kind == "episode" %>
+        <div class="medium">
+          <h4><%= title.title %></h4>
+            <% if title.poster != "N/A" %>
+            <img class="img_shape" style="height:300px; width:250px" src="<%= title.poster %>" alt="poster">
+            <% else %>
+            <img class="img_shape" style="height:300px; width:250px" src="http://i.movie.as/none_140px_2_bk.jpg" alt="no poster">
+            <% end %>
+            <div class="caption" style="padding-left:40px">
+            <%= link_to "Delete", watch_item, :method => :delete, :class => 'btn btn-danger', :confirm => "Are you sure?" %>
+            <a class="btn btn-primary" href="/titles/<%= title_id %>">Review</a>
+          </div>
+        </div>
         <% end %>
-        <li><%= title.title %></li>
-      </ul>
       <% end %>
-      <%= link_to "Delete", watch_item, :method => :delete, :confirm => "Are you sure?" %>
-      <a href="/titles/<%= title_id %>">Review</a>
-    <% end %>
-<!--   add ability to call a post method on a checkbox with a form
- -->
+    </div><!-- /.col-lg-4 -->
+  </div>
+</div>
+
