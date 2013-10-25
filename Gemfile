@@ -8,7 +8,6 @@ gem 'rails', '3.2.14'
 gem 'pg'
 gem 'httparty'
 gem 'omdbapi'
-gem 'twitter-bootstrap-rails'
 gem 'bootstrap-sass', '~> 3.0.0.0.rc'
 gem "flat-ui-rails"
 #Gemfile

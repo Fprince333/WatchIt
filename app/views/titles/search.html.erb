@@ -11,7 +11,7 @@
 </div>
 <div class="row">
   <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
-    <% if @movies%>
+    <% if @movies %>
     <div class="thumbnail" style="text-align: center; background: #ecf0f1; padding-top: 35px;">
     <% @movies.each do |t| %>
     <% title = OMDB.id(t[:imdb_id]) %>

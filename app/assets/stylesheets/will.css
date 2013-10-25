@@ -1,5 +1,5 @@
 body {
-  font-family: 'Lato';
+  font-family: 'Lato' !important;
   min-height: 500px;
   padding-top: 70px;
   background: url('bg.jpg') no-repeat center center fixed !important;
