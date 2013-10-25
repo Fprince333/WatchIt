@@ -1,14 +1,24 @@
-<section>
-<h2><%= @title.title %></h2>
-<img src="<%= @title.poster %>" alt="poster">
-
-<div class="reviews">
-<h5>Reviews</h5>
-<ul class="reviews-list">
-<%= render :partial => 'review', :collection => @title.reviews %>
-</ul>
+<div class="row">
+  <div class="container">
+    <h2><%= @title.title %></h2>
+    <div class="medium">
+      <% if @title.poster != "N/A" %>
+      <img class="img_shape"src="<%= @title.poster %>" alt="poster">
+      <% else %>
+      <img class="img_shape" src="http://i.movie.as/none_140px_2_bk.jpg" alt="no poster">
+      <% end %>
+    </div>
+  </div>
 </div>
-<%= form_for [@title, @review] do |f| %>
-  <%= f.text_area :body, size: "60x12" %>
-  <%= f.submit "Submit Review" %>
-<% end %>
+<div class="row">
+  <div class="container">
+    <div class="reviews">
+      <%= render :partial => 'review', :collection => @title.reviews %>
+    </div>
+    <%= form_for [@title, @review] do |f| %>
+    <%= f.text_area :body, :class => "form-control input-hg" %>
+    <%= f.submit "Submit Review", :class => "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+

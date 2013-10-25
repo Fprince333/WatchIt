@@ -1,12 +1,8 @@
 <% unless review.new_record? %>
-<li>
-  <div class="review">
-    <span class="review-datetime">
-      Posted <%= time_ago_in_words(review.created_at) %> ago
-    </span>
-    <div class="review-body">
-      <%= review.body %>
+  <div class="col-lg-8 pull-right">
+    <div class="well well-sm pull-right">
+      <h5>Posted <%= time_ago_in_words(review.created_at) %> ago</h5>
+      <p><%= review.body %></p>
     </div>
   </div>
-</li>
 <% end %>

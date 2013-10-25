@@ -1,14 +1,16 @@
 <div class="container">
-<%= form_tag sessions_path, :class => 'form-signin' do %>
-<h1>Log in</h1>
-  <p>
-    <%= label_tag :username %><br />
-    <%= text_field_tag :username, params[:username], :class => 'form-control' %>
-  </p>
-  <p>
-    <%= label_tag :password %><br />
-    <%= password_field_tag :password, '', :class => 'form-control' %>
-  </p>
-<%= button_tag "Log in", :class => 'btn btn-block btn-lg btn-primary' %>
-<% end %>
+  <div class="pull-right shape">
+    <%= form_tag sessions_path, :class => 'form-signin' do %>
+    <h1>Log in</h1>
+    <p>
+      <%= label_tag :username %><br />
+      <%= text_field_tag :username, params[:username], :class => 'form-control' %>
+    </p>
+    <p>
+      <%= label_tag :password %><br />
+      <%= password_field_tag :password, '', :class => 'form-control' %>
+    </p>
+    <%= button_tag "Log in", :class => 'btn btn-block btn-lg btn-primary' %>
+    <% end %>
+  </div>
 </div> <!-- /container -->
